@@ -250,7 +250,21 @@ main{ position:relative; z-index:2; }
   background: linear-gradient(135deg,#fff3e2,#ffe3cf);
   overflow:hidden;
 }
-.mini-scene.lake{ background: linear-gradient(180deg,#cfe8ff 0%, #a9d8ff 60%, #8fcdf2 100%); }
+.mini-scene.lake{ background: linear-gradient(180deg,#bfe8c8 0%, #cfe8ff 28%, #a9d8ff 65%, #8fcdf2 100%); }
+.mini-scene .shore{
+  position:absolute; top:0; left:0; right:0; height:14px;
+  background: repeating-linear-gradient(90deg, #7fbf7f 0 8px, #6bb06b 8px 16px);
+  border-radius:0 0 40% 40% / 0 0 100% 100%;
+}
+.mini-scene .tower{
+  position:absolute; top:16px; left:50%; transform:translateX(-50%);
+  font-size:1.5rem;
+  animation: tower-float 4.5s ease-in-out infinite;
+}
+@keyframes tower-float{
+  0%,100%{ transform: translateX(-50%) translateY(0); }
+  50%{ transform: translateX(-50%) translateY(-4px); }
+}
 .mini-scene .water{
   position:absolute; bottom:0; left:0; right:0; height:30px;
   background: repeating-linear-gradient(90deg, rgba(255,255,255,.5) 0 10px, transparent 10px 20px);
@@ -291,9 +305,11 @@ main{ position:relative; z-index:2; }
   position:absolute; bottom:6px; font-size:1.1rem;
   animation: sway 3.4s ease-in-out infinite;
 }
-.f1{ left:8%; animation-delay:0s; }
-.f2{ left:38%; animation-delay:.8s; }
-.f3{ right:12%; animation-delay:1.6s; }
+.f1{ left:6%; animation-delay:0s; }
+.f2{ left:30%; animation-delay:.8s; }
+.f3{ right:28%; animation-delay:1.6s; }
+.f4{ right:10%; animation-delay:.4s; font-size:1.3rem; }
+.f5{ left:16%; animation-delay:1.2s; }
 @keyframes sway{
   0%,100%{ transform: rotate(-6deg); }
   50%{ transform: rotate(6deg); }
