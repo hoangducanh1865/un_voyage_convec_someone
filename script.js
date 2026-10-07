@@ -21,6 +21,7 @@ for (let i = 0; i < SKY_COUNT; i++) {
 const bgMusic = document.getElementById('bgMusic');
 const musicToggle = document.getElementById('musicToggle');
 let musicPlaying = false;
+bgMusic.volume = 0.35;
 
 musicToggle.addEventListener('click', () => {
   if (musicPlaying) {
