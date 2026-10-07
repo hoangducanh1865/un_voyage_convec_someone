@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chiều thu Hà Nội cùng em 🍂</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- floating autumn leaves + hearts background -->
+  <div class="sky" id="sky"></div>
+
+  <!-- INTRO SCREEN -->
+  <section class="intro" id="intro">
+    <div class="intro-card">
+      <div class="balloon b1">🎈</div>
+      <div class="balloon b2">🎈</div>
+      <div class="sun">☀️</div>
+      <h1>Hmai ơi, chiều nay rảnh không? 🍁</h1>
+      <p>Đức Anh lên sẵn lịch trình chiều nay rồi, xem thử nhé.</p>
+      <button id="startBtn">Xem lịch trình</button>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" class="hidden">
+
+    <header class="hero">
+      <div class="hero-emoji">🍂🚶🍵</div>
+      <h1>Lịch trình chiều nay</h1>
+      <p class="subtitle">15:00 — 20:00 · Hà Nội</p>
+      <div class="scroll-hint">kéo xuống xem chi tiết ⬇️</div>
+    </header>
+
+    <div class="timeline" id="timeline">
+
+      <div class="stop" data-anim>
+        <div class="stop-icon" style="--c:#ffb703">🚕</div>
+        <div class="stop-card">
+          <span class="stop-time">15:00 – 15:30</span>
+          <h3>Xuất phát đến Hồ Gươm</h3>
+          <p>Di chuyển đến khu phố cổ, chắc mất khoảng 30 phút.</p>
+        </div>
+      </div>
+
+      <div class="stop reverse" data-anim>
+        <div class="stop-icon" style="--c:#4cc9f0">📸</div>
+        <div class="stop-card">
+          <span class="stop-time">15:30 – 16:45</span>
+          <h3>Dạo & chụp ảnh "Thu Hà Nội"</h3>
+          <p>Đi quanh hồ, chụp vài kiểu ảnh lúc nắng đẹp. Khoảng 1 tiếng rưỡi, không vội.</p>
+          <div class="mini-scene lake">
+            <div class="leaf l1">🍁</div>
+            <div class="leaf l2">🍂</div>
+            <div class="leaf l3">🍁</div>
+            <div class="water"></div>
+            <div class="swan">🦢</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop" data-anim>
+        <div class="stop-icon" style="--c:#ff6b6b">🚶</div>
+        <div class="stop-card">
+          <span class="stop-time">16:45 – 17:00</span>
+          <h3>Đi bộ tới quán chè</h3>
+          <p>Từ Hồ Gươm qua 80 Hàng Điếu, đi bộ khoảng 15 phút.</p>
+        </div>
+      </div>
+
+      <div class="stop reverse" data-anim>
+        <div class="stop-icon" style="--c:#f3722c">🍮</div>
+        <div class="stop-card">
+          <span class="stop-time">17:00 – 17:30</span>
+          <h3>Chè trôi tàu</h3>
+          <p>80 Hàng Điếu. Món này hợp ăn lúc trời se lạnh, nghe nói quán khá đông nên chắc phải chờ chút.</p>
+          <div class="mini-scene">
+            <div class="bowl">
+              <div class="steam s1"></div>
+              <div class="steam s2"></div>
+              <div class="steam s3"></div>
+              <span class="ball">🟡</span><span class="ball">🟡</span><span class="ball">🟡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop" data-anim>
+        <div class="stop-icon" style="--c:#90be6d">🚲</div>
+        <div class="stop-card">
+          <span class="stop-time">17:30 – 17:45</span>
+          <h3>Di chuyển tới Hanoi Neighbors</h3>
+          <p>114 Tuệ Tĩnh, cách đó một đoạn ngắn.</p>
+        </div>
+      </div>
+
+      <div class="stop reverse" data-anim>
+        <div class="stop-icon" style="--c:#9b5de5">☕</div>
+        <div class="stop-card">
+          <span class="stop-time">17:45 – 19:45</span>
+          <h3>Cafe</h3>
+          <p>Ngồi lâu lâu chút, nói chuyện. 2 tiếng chắc đủ.</p>
+          <div class="mini-scene cafe">
+            <div class="cup">
+              <div class="steam s1"></div>
+              <div class="steam s2"></div>
+              ☕
+            </div>
+            <div class="hearts">
+              <span>💛</span><span>💛</span><span>💛</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop" data-anim>
+        <div class="stop-icon" style="--c:#f94144">🌙</div>
+        <div class="stop-card">
+          <span class="stop-time">19:45 – 20:00</span>
+          <h3>Di chuyển tới quán ốc</h3>
+          <p>1A Đinh Liệt, đi bộ qua lúc phố đã lên đèn.</p>
+        </div>
+      </div>
+
+      <div class="stop reverse" data-anim>
+        <div class="stop-icon" style="--c:#e85d04">🐚</div>
+        <div class="stop-card">
+          <span class="stop-time">từ 20:00</span>
+          <h3>Ốc nóng Hà Trang</h3>
+          <p>Chốt bữa tối ở đây. Nghe nói ăn cay, Hmai liệu cơm gắp mắm nhé.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="outro" data-anim>
+      <div class="outro-emoji">🍂🍁</div>
+      <h2>Hmai thấy sao?</h2>
+      <p>Lịch trình chắc chốt vậy, nếu Hmai thích thì mình đi chiều nay nhé.</p>
+      <button id="yesBtn">Chốt, đi thôi</button>
+      <div class="confetti-area" id="confetti"></div>
+    </footer>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
