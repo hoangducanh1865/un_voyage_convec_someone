@@ -404,17 +404,15 @@ main{ position:relative; z-index:2; }
 }
 @keyframes road-move{ from{background-position-x:0;} to{background-position-x:-40px;} }
 .mini-scene .car{
-  position:absolute; bottom:20px; font-size:1.9rem;
-  animation: drive 11s ease-in-out infinite;
+  position:absolute; bottom:20px; left:50%; font-size:1.9rem;
+  transform: translateX(-50%);
+  animation: idle-bounce 3.5s ease-in-out infinite;
 }
-@keyframes drive{
-  0%{ left:-10%; transform: scaleX(-1); }
-  48%{ left:85%; transform: scaleX(-1); }
-  50%{ left:85%; transform: scaleX(1); }
-  98%{ left:-10%; transform: scaleX(1); }
-  100%{ left:-10%; transform: scaleX(-1); }
+@keyframes idle-bounce{
+  0%,100%{ transform: translateX(-50%) translateY(0); }
+  50%{ transform: translateX(-50%) translateY(-5px); }
 }
-.mini-scene .car.moto{ font-size:1.7rem; animation-duration:6s; }
+.mini-scene .car.moto{ font-size:1.7rem; }
 .mini-scene .cloud{
   position:absolute; top:10px; font-size:1.2rem; opacity:0.8;
   animation: cloud-drift 10s linear infinite;
@@ -431,17 +429,9 @@ main{ position:relative; z-index:2; }
   background: linear-gradient(180deg,#fff3e2 0%, #ffe3cf 100%);
 }
 .mini-scene .walker{
-  position:absolute; bottom:18px; font-size:1.8rem;
-  animation: stroll 12s ease-in-out infinite;
-}
-@keyframes stroll{
-  0%{ left:-5%; transform: scaleX(1) translateY(0); }
-  24%{ transform: scaleX(1) translateY(-4px); }
-  48%{ left:88%; transform: scaleX(1) translateY(0); }
-  50%{ left:88%; transform: scaleX(-1) translateY(0); }
-  74%{ transform: scaleX(-1) translateY(-4px); }
-  98%{ left:-5%; transform: scaleX(-1) translateY(0); }
-  100%{ left:-5%; transform: scaleX(1) translateY(0); }
+  position:absolute; bottom:18px; left:50%; font-size:1.8rem;
+  transform: translateX(-50%);
+  animation: idle-bounce 3.8s ease-in-out infinite;
 }
 .mini-scene.walk .dots{
   position:absolute; bottom:16px; left:0; right:0; height:2px;
@@ -485,8 +475,7 @@ main{ position:relative; z-index:2; }
   50%{ transform: rotate(8deg); }
 }
 .mini-scene.night .walker{
-  position:absolute; bottom:12px; font-size:1.6rem;
-  animation: stroll 12.5s ease-in-out infinite;
+  bottom:12px;
   filter: brightness(1.3);
 }
 
