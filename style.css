@@ -278,6 +278,26 @@ main{ position:relative; z-index:2; }
   0%,100%{ transform: translateX(0); }
   50%{ transform: translateX(-30px); }
 }
+.mini-scene .sun-ray{
+  position:absolute; top:8px; right:14px;
+  font-size:1.4rem;
+  animation: sun-glow 3s ease-in-out infinite;
+}
+@keyframes sun-glow{
+  0%,100%{ transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 2px #fff6c8); }
+  50%{ transform: scale(1.12) rotate(10deg); filter: drop-shadow(0 0 8px #fff6c8); }
+}
+.mini-scene .flower{
+  position:absolute; bottom:6px; font-size:1.1rem;
+  animation: sway 3.4s ease-in-out infinite;
+}
+.f1{ left:8%; animation-delay:0s; }
+.f2{ left:38%; animation-delay:.8s; }
+.f3{ right:12%; animation-delay:1.6s; }
+@keyframes sway{
+  0%,100%{ transform: rotate(-6deg); }
+  50%{ transform: rotate(6deg); }
+}
 
 .mini-scene .bowl{
   position:absolute; left:50%; bottom:10px; transform:translateX(-50%);
