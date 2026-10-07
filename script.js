@@ -17,12 +17,37 @@ for (let i = 0; i < SKY_COUNT; i++) {
   sky.appendChild(el);
 }
 
+// ---- background music toggle ----
+const bgMusic = document.getElementById('bgMusic');
+const musicToggle = document.getElementById('musicToggle');
+let musicPlaying = false;
+
+musicToggle.addEventListener('click', () => {
+  if (musicPlaying) {
+    bgMusic.pause();
+    musicToggle.textContent = '🔇';
+    musicToggle.classList.remove('playing');
+  } else {
+    bgMusic.play().catch(() => {});
+    musicToggle.textContent = '🔊';
+    musicToggle.classList.add('playing');
+  }
+  musicPlaying = !musicPlaying;
+});
+
 // ---- intro -> main ----
 const introSection = document.getElementById('intro');
 const main = document.getElementById('main');
 const startBtn = document.getElementById('startBtn');
 
 startBtn.addEventListener('click', () => {
+  if (!musicPlaying) {
+    bgMusic.play().then(() => {
+      musicPlaying = true;
+      musicToggle.textContent = '🔊';
+      musicToggle.classList.add('playing');
+    }).catch(() => {});
+  }
   introSection.style.transition = 'opacity .5s ease, transform .5s ease';
   introSection.style.opacity = '0';
   introSection.style.transform = 'scale(0.96)';
