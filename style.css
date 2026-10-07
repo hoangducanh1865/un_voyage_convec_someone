@@ -141,10 +141,15 @@ main{ position:relative; z-index:2; }
 
 .hero{
   text-align:center;
-  padding:110px 20px 60px;
+  padding:60px 20px 40px;
   position:relative;
-  background: linear-gradient(180deg, rgba(43,24,10,0.35), rgba(43,24,10,0.75) 70%, var(--cream) 100%),
-              url('assets/img/hero-bg.jpg') center 30% / cover no-repeat;
+  min-height:92vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  background: linear-gradient(180deg, rgba(43,24,10,0.25) 0%, rgba(43,24,10,0.15) 45%, rgba(43,24,10,0.65) 85%, var(--cream) 100%),
+              url('assets/img/hero-bg.jpg') center center / contain no-repeat, #1c140d;
   color:#fff7ec;
   margin-bottom:-1px;
 }
@@ -389,12 +394,12 @@ main{ position:relative; z-index:2; }
 .mini-scene .road-line{
   position:absolute; bottom:18px; left:0; right:0; height:3px;
   background: repeating-linear-gradient(90deg, #c98b55 0 14px, transparent 14px 26px);
-  animation: road-move 1s linear infinite;
+  animation: road-move 2.2s linear infinite;
 }
 @keyframes road-move{ from{background-position-x:0;} to{background-position-x:-40px;} }
 .mini-scene .car{
   position:absolute; bottom:20px; font-size:1.9rem;
-  animation: drive 3.2s ease-in-out infinite;
+  animation: drive 7s ease-in-out infinite;
 }
 @keyframes drive{
   0%{ left:-10%; transform: scaleX(-1); }
@@ -403,7 +408,7 @@ main{ position:relative; z-index:2; }
   98%{ left:-10%; transform: scaleX(1); }
   100%{ left:-10%; transform: scaleX(-1); }
 }
-.mini-scene .car.moto{ font-size:1.7rem; animation-duration:2.6s; }
+.mini-scene .car.moto{ font-size:1.7rem; animation-duration:6s; }
 .mini-scene .cloud{
   position:absolute; top:10px; font-size:1.2rem; opacity:0.8;
   animation: cloud-drift 6s linear infinite;
@@ -421,7 +426,7 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene .walker{
   position:absolute; bottom:18px; font-size:1.8rem;
-  animation: stroll 3.6s ease-in-out infinite;
+  animation: stroll 7.5s ease-in-out infinite;
 }
 @keyframes stroll{
   0%{ left:-5%; transform: scaleX(1) translateY(0); }
@@ -475,7 +480,7 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene.night .walker{
   position:absolute; bottom:12px; font-size:1.6rem;
-  animation: stroll 4s ease-in-out infinite;
+  animation: stroll 8s ease-in-out infinite;
   filter: brightness(1.3);
 }
 
