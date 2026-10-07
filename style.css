@@ -62,7 +62,7 @@ body{
   align-items:center;
   justify-content:center;
 }
-.music-toggle.playing{ animation: icon-pulse 2s ease-in-out infinite; }
+.music-toggle.playing{ animation: icon-pulse 3.5s ease-in-out infinite; }
 
 /* ---------- intro ---------- */
 .intro{
@@ -101,14 +101,14 @@ body{
 }
 .sun{
   font-size:3rem;
-  animation: spin 8s linear infinite;
+  animation: spin 14s linear infinite;
   display:inline-block;
 }
 @keyframes spin{ from{transform:rotate(0)} to{transform:rotate(360deg)} }
 .balloon{
   position:absolute;
   font-size:2rem;
-  animation: float 4s ease-in-out infinite;
+  animation: float 6.5s ease-in-out infinite;
 }
 .b1{ top:-20px; left:-10px; animation-delay:0s;}
 .b2{ top:-30px; right:-6px; animation-delay:1.2s;}
@@ -151,22 +151,27 @@ main{ position:relative; z-index:2; }
 .hero-fade{
   position:absolute;
   inset:0;
-  background: linear-gradient(180deg, rgba(43,24,10,0.3) 0%, rgba(43,24,10,0.05) 20%, rgba(43,24,10,0.1) 60%, rgba(43,24,10,0.85) 92%, var(--cream) 100%);
+  background: linear-gradient(180deg, rgba(43,24,10,0.35) 0%, rgba(43,24,10,0.15) 50%, rgba(43,24,10,0.35) 85%, var(--cream) 100%);
   pointer-events:none;
 }
 .hero-content{
   position:absolute;
-  left:0; right:0; bottom:0;
-  padding:24px 20px 36px;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:24px 20px 80px;
   color:#fff7ec;
 }
-.hero-content h1{ color:#fff7ec; margin:0 0 10px; font-size:1.9rem; line-height:1.3; }
-.hero-content .subtitle{ color:#ffe3c7; margin:0; font-weight:600; letter-spacing:1px; }
-.hero-content .scroll-hint{ color:#ffe3c7; margin-top:20px; }
+.hero-content h1{ color:#fff7ec; margin:0 0 16px; font-size:2.8rem; line-height:1.3; text-shadow:0 4px 18px rgba(0,0,0,0.35); }
+.hero-content .subtitle{ color:#ffe3c7; margin:0; font-weight:700; letter-spacing:1.5px; font-size:1.3rem; }
+.hero-content .scroll-hint{ color:#ffe3c7; margin-top:30px; font-size:1.1rem; }
+.hero-content .hero-emoji{ font-size:3.6rem; margin-bottom:18px; }
 .hero-emoji{
   font-size:2.6rem;
   margin-bottom:10px;
-  animation: wiggle 2.4s ease-in-out infinite;
+  animation: wiggle 4s ease-in-out infinite;
 }
 @keyframes wiggle{
   0%,100%{ transform: rotate(-6deg); }
@@ -182,7 +187,7 @@ main{ position:relative; z-index:2; }
   margin-top:26px;
   color:#c17f4f;
   font-size:0.9rem;
-  animation: bob 1.6s ease-in-out infinite;
+  animation: bob 2.8s ease-in-out infinite;
 }
 @keyframes bob{
   0%,100%{ transform: translateY(0); }
@@ -237,7 +242,7 @@ main{ position:relative; z-index:2; }
   box-shadow: 0 8px 18px rgba(0,0,0,0.18);
   border:4px solid #fff;
   z-index:2;
-  animation: icon-pulse 3s ease-in-out infinite;
+  animation: icon-pulse 4.5s ease-in-out infinite;
 }
 @keyframes icon-pulse{
   0%,100%{ transform: scale(1); }
@@ -293,7 +298,7 @@ main{ position:relative; z-index:2; }
 .mini-scene .tower{
   position:absolute; top:16px; left:50%; transform:translateX(-50%);
   font-size:1.5rem;
-  animation: tower-float 4.5s ease-in-out infinite;
+  animation: tower-float 7s ease-in-out infinite;
 }
 @keyframes tower-float{
   0%,100%{ transform: translateX(-50%) translateY(0); }
@@ -302,12 +307,12 @@ main{ position:relative; z-index:2; }
 .mini-scene .water{
   position:absolute; bottom:0; left:0; right:0; height:30px;
   background: repeating-linear-gradient(90deg, rgba(255,255,255,.5) 0 10px, transparent 10px 20px);
-  animation: ripple 3s linear infinite;
+  animation: ripple 5s linear infinite;
 }
 @keyframes ripple{ from{background-position-x:0;} to{background-position-x:40px;} }
 .mini-scene .leaf{
   position:absolute; top:-10px; font-size:1.3rem;
-  animation: leaf-fall 4s ease-in infinite;
+  animation: leaf-fall 6.5s ease-in infinite;
 }
 .l1{ left:15%; animation-delay:0s; }
 .l2{ left:50%; animation-delay:1.3s; }
@@ -320,7 +325,7 @@ main{ position:relative; z-index:2; }
 .mini-scene .swan{
   position:absolute; bottom:28px; right:20%;
   font-size:1.6rem;
-  animation: drift 5s ease-in-out infinite;
+  animation: drift 8s ease-in-out infinite;
 }
 @keyframes drift{
   0%,100%{ transform: translateX(0); }
@@ -329,7 +334,7 @@ main{ position:relative; z-index:2; }
 .mini-scene .sun-ray{
   position:absolute; top:8px; right:14px;
   font-size:1.4rem;
-  animation: sun-glow 3s ease-in-out infinite;
+  animation: sun-glow 5s ease-in-out infinite;
 }
 @keyframes sun-glow{
   0%,100%{ transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 2px #fff6c8); }
@@ -337,7 +342,7 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene .flower{
   position:absolute; bottom:6px; font-size:1.1rem;
-  animation: sway 3.4s ease-in-out infinite;
+  animation: sway 5.5s ease-in-out infinite;
 }
 .f1{ left:6%; animation-delay:0s; }
 .f2{ left:30%; animation-delay:.8s; }
@@ -359,7 +364,7 @@ main{ position:relative; z-index:2; }
   background: rgba(255,255,255,0.8);
   border-radius:4px;
   filter: blur(1px);
-  animation: steam-rise 2.4s ease-in-out infinite;
+  animation: steam-rise 3.8s ease-in-out infinite;
 }
 .s1{ left:-14px; animation-delay:0s;}
 .s2{ left:0px; animation-delay:.5s;}
@@ -379,7 +384,7 @@ main{ position:relative; z-index:2; }
 .mini-scene .hearts span{
   display:inline-block;
   font-size:1.2rem;
-  animation: heart-pop 2s ease-in-out infinite;
+  animation: heart-pop 3.2s ease-in-out infinite;
 }
 .mini-scene .hearts span:nth-child(2){ animation-delay:.3s; }
 .mini-scene .hearts span:nth-child(3){ animation-delay:.6s; }
@@ -395,12 +400,12 @@ main{ position:relative; z-index:2; }
 .mini-scene .road-line{
   position:absolute; bottom:18px; left:0; right:0; height:3px;
   background: repeating-linear-gradient(90deg, #c98b55 0 14px, transparent 14px 26px);
-  animation: road-move 2.2s linear infinite;
+  animation: road-move 3.5s linear infinite;
 }
 @keyframes road-move{ from{background-position-x:0;} to{background-position-x:-40px;} }
 .mini-scene .car{
   position:absolute; bottom:20px; font-size:1.9rem;
-  animation: drive 7s ease-in-out infinite;
+  animation: drive 11s ease-in-out infinite;
 }
 @keyframes drive{
   0%{ left:-10%; transform: scaleX(-1); }
@@ -412,7 +417,7 @@ main{ position:relative; z-index:2; }
 .mini-scene .car.moto{ font-size:1.7rem; animation-duration:6s; }
 .mini-scene .cloud{
   position:absolute; top:10px; font-size:1.2rem; opacity:0.8;
-  animation: cloud-drift 6s linear infinite;
+  animation: cloud-drift 10s linear infinite;
 }
 .cloud.c1{ top:8px; animation-delay:0s; }
 .cloud.c2{ top:22px; animation-delay:2.5s; }
@@ -427,7 +432,7 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene .walker{
   position:absolute; bottom:18px; font-size:1.8rem;
-  animation: stroll 7.5s ease-in-out infinite;
+  animation: stroll 12s ease-in-out infinite;
 }
 @keyframes stroll{
   0%{ left:-5%; transform: scaleX(1) translateY(0); }
@@ -445,7 +450,7 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene.walk .leaf{
   position:absolute; top:-10px; font-size:1.1rem;
-  animation: leaf-fall 4.5s ease-in infinite;
+  animation: leaf-fall 7s ease-in infinite;
 }
 .mini-scene.walk .l1{ left:25%; animation-delay:.5s; }
 .mini-scene.walk .l2{ left:70%; animation-delay:2s; }
@@ -456,11 +461,11 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene.night .moon{
   position:absolute; top:8px; right:14px; font-size:1.5rem;
-  animation: sun-glow 3.5s ease-in-out infinite;
+  animation: sun-glow 5.5s ease-in-out infinite;
 }
 .mini-scene.night .star{
   position:absolute; font-size:0.8rem;
-  animation: twinkle 2s ease-in-out infinite;
+  animation: twinkle 3.2s ease-in-out infinite;
 }
 .st1{ top:12px; left:16%; animation-delay:0s; }
 .st2{ top:28px; left:40%; animation-delay:.6s; }
@@ -471,7 +476,7 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene.night .lantern{
   position:absolute; bottom:14px; font-size:1.3rem;
-  animation: lantern-sway 2.6s ease-in-out infinite;
+  animation: lantern-sway 4.2s ease-in-out infinite;
 }
 .la1{ left:14%; animation-delay:0s; }
 .la2{ right:14%; animation-delay:1s; }
@@ -481,7 +486,7 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene.night .walker{
   position:absolute; bottom:12px; font-size:1.6rem;
-  animation: stroll 8s ease-in-out infinite;
+  animation: stroll 12.5s ease-in-out infinite;
   filter: brightness(1.3);
 }
 
@@ -493,21 +498,21 @@ main{ position:relative; z-index:2; }
 }
 .mini-scene.ocscene .shells{
   font-size:1.6rem;
-  animation: icon-pulse 2.4s ease-in-out infinite;
+  animation: icon-pulse 3.8s ease-in-out infinite;
 }
 .mini-scene.ocscene .steam{
   position:absolute; bottom:40px; width:4px; height:18px;
   background: rgba(255,255,255,0.75);
   border-radius:4px;
   filter: blur(1px);
-  animation: steam-rise 2.2s ease-in-out infinite;
+  animation: steam-rise 3.5s ease-in-out infinite;
 }
 .mini-scene.ocscene .s1{ left:38%; animation-delay:0s; }
 .mini-scene.ocscene .s2{ left:50%; animation-delay:.5s; }
 .mini-scene.ocscene .s3{ left:62%; animation-delay:1s; }
 .mini-scene.ocscene .chili{
   position:absolute; font-size:1.1rem;
-  animation: heart-pop 2.4s ease-in-out infinite;
+  animation: heart-pop 3.8s ease-in-out infinite;
 }
 .mini-scene.ocscene .c1{ left:16%; bottom:14px; animation-delay:.2s; }
 .mini-scene.ocscene .c2{ right:16%; bottom:14px; animation-delay:1s; }
@@ -525,7 +530,7 @@ main{ position:relative; z-index:2; }
 .outro-emoji{
   font-size:2.4rem;
   margin-bottom:10px;
-  animation: wiggle 2.4s ease-in-out infinite;
+  animation: wiggle 4s ease-in-out infinite;
 }
 .outro h2{
   color:var(--orange-dark);
